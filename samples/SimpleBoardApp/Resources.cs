@@ -40,15 +40,15 @@ class Resources
         <hr />
         <form method="post" action="{{httpContext.Request.PathBase.Add("/post")}}">
           <div>
-            <label>お名前 <input type="text" name="name" autocomplete="off" /></label>
+            <label>Name <input type="text" name="name" autocomplete="off" /></label>
           </div>
           <div>
             <label>
-            <div>メッセージ</div>
+            <div>Message</div>
             <textarea name="body"></textarea>
             </label>
           </div>
-          <input type="submit" value="投稿" />
+          <input type="submit" value="Post" />
           <input type="hidden" name="{{antiforgeryTokenSet.FormFieldName}}" value="{{antiforgeryTokenSet.RequestToken}}" />
         </form>
         <hr />
@@ -57,7 +57,7 @@ class Resources
         """
         <div class="entry">
           <header>
-            <span class="name">{0}</span> 投稿日: {1}
+            <span class="name">{0}</span>: {1}
           </header>
           <p>{2}</p>
         </div>
